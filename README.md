@@ -1,1 +1,2 @@
-Slice-demo  
+# slice-demo
+Cognifide Slice Framework Demo
