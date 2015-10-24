@@ -15,7 +15,6 @@
  */
 package com.cognifide.demo.slice.demo.core.models;
 
-import javax.inject.Inject;
 
 import org.apache.sling.settings.SlingSettingsService;
 
@@ -23,6 +22,7 @@ import com.cognifide.demo.slice.demo.core.businesslogic.BusinessLogicProvider;
 import com.cognifide.slice.api.annotation.OsgiService;
 import com.cognifide.slice.mapper.annotation.JcrProperty;
 import com.cognifide.slice.mapper.annotation.SliceResource;
+import com.google.inject.Inject;
 
 @SliceResource
 public class HelloWorldModel {
@@ -53,9 +53,9 @@ public class HelloWorldModel {
 	}
 
 	public String getMessage() {
-		String returnMessage = "Hello World!\n";
-		returnMessage += "This is instance: " + settings.getSlingId() + "\n";
-		returnMessage += "Resource type is: " + resourceType + "\n";
+		String returnMessage = "Hello World!\n"
+				+ "This is instance: " + settings.getSlingId() + "\n"
+				+ "Resource type is: " + resourceType + "\n";
 
 		return returnMessage;
 	}
