@@ -1,0 +1,8 @@
+<sly data-sly-use.model="com.cognifide.demo.slice.demo.core.models.HelloWorldModel" data-sly-unwrap/>
+<p data-sly-test="${model.text}">Text property: ${model.text}</p>
+
+<pre>
+HelloWorldModel says:
+${model.message}
+<p><b>Today's winning number is: ${model.dynamicMessage}</b></p>
+</pre>
