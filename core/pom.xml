@@ -8,7 +8,7 @@
 	KIND, either express or implied. | See the License for the specific language 
 	governing permissions and | limitations under the License. -->
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>com.cognifide.demo</groupId>
@@ -20,6 +20,10 @@
 	<packaging>bundle</packaging>
 	<name>Slice Demo - Core</name>
 	<description>Core bundle for Slice Demo</description>
+	<properties>
+		<slice.version>4.3.1</slice.version>
+		<slice.cq-addon.version>1.2.0</slice.cq-addon.version>
+	</properties>
 	<build>
 		<plugins>
 			<plugin>
@@ -70,63 +74,39 @@
 		<dependency>
 			<groupId>com.cognifide.slice</groupId>
 			<artifactId>slice-core-api</artifactId>
-			<version>4.1.0</version>
+			<version>${slice.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>com.cognifide.slice</groupId>
 			<artifactId>slice-core</artifactId>
-			<version>4.1.0</version>
+			<version>${slice.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>com.cognifide.slice</groupId>
 			<artifactId>slice-mapper</artifactId>
-			<version>4.1.0</version>
+			<version>${slice.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>com.cognifide.slice</groupId>
 			<artifactId>slice-mapper-api</artifactId>
-			<version>4.1.0</version>
+			<version>${slice.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>com.cognifide.slice-addon</groupId>
 			<artifactId>slice-aem60</artifactId>
-			<version>1.0.0</version>
+			<version>${slice.cq-addon.version}</version>
 		</dependency>
-		
+
 		<!-- OSGi Dependencies -->
-		<dependency>
-			<groupId>org.apache.felix</groupId>
-			<artifactId>org.apache.felix.scr</artifactId>
-		</dependency>
 		<dependency>
 			<groupId>org.apache.felix</groupId>
 			<artifactId>org.apache.felix.scr.annotations</artifactId>
 		</dependency>
 		<dependency>
-			<groupId>biz.aQute</groupId>
-			<artifactId>bndlib</artifactId>
-		</dependency>
-		<dependency>
 			<groupId>org.osgi</groupId>
 			<artifactId>org.osgi.core</artifactId>
 		</dependency>
-		<dependency>
-			<groupId>org.osgi</groupId>
-			<artifactId>org.osgi.compendium</artifactId>
-		</dependency>
 		<!-- Other Dependencies -->
-		<dependency>
-			<groupId>org.slf4j</groupId>
-			<artifactId>slf4j-api</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>javax.jcr</groupId>
-			<artifactId>jcr</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>javax.servlet</groupId>
-			<artifactId>servlet-api</artifactId>
-		</dependency>
 		<dependency>
 			<groupId>com.adobe.aem</groupId>
 			<artifactId>aem-api</artifactId>
@@ -138,10 +118,6 @@
 		<dependency>
 			<groupId>org.mockito</groupId>
 			<artifactId>mockito-all</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>junit-addons</groupId>
-			<artifactId>junit-addons</artifactId>
 		</dependency>
 	</dependencies>
 </project>
