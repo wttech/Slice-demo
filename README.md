@@ -22,7 +22,7 @@ Compile and install:
 
     mvn install -PautoInstallPackage
 
-    or
+or
 
     mvn install -PautoInstallPackagePublish
 
