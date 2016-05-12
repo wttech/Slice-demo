@@ -3,6 +3,7 @@ package com.cognifide.demo.slice.demo.core.models;
 
 import org.apache.sling.settings.SlingSettingsService;
 
+import com.adobe.granite.xss.XSSAPI;
 import com.cognifide.demo.slice.demo.core.businesslogic.BusinessLogicProvider;
 import com.cognifide.slice.api.annotation.OsgiService;
 import com.cognifide.slice.mapper.annotation.JcrProperty;
@@ -20,6 +21,9 @@ public class HelloWorldModel {
 	@JcrProperty("sling:resourceType")
 	private String resourceType;
 
+	@Inject
+	private XSSAPI xssApi;
+
 	private SlingSettingsService settings;
 
 	private BusinessLogicProvider logicProvider;
@@ -34,15 +38,14 @@ public class HelloWorldModel {
 
 	// Simple getter for automatically mapped property
 	public String getText() {
-		return text;
+		return xssApi.filterHTML(text);
 	}
 
 	public String getMessage() {
-		String returnMessage = "Hello World!\n"
+
+		return "Hello World!\n"
 				+ "This is instance: " + settings.getSlingId() + "\n"
 				+ "Resource type is: " + resourceType + "\n";
-
-		return returnMessage;
 	}
 
 	// Message delivered from injected business logic provider
