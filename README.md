@@ -1,2 +1,2 @@
 # slice-demo
-Cognifide Slice Framework Demo
+Wunderman Thompson Technology Slice Framework Demo

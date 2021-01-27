@@ -66,7 +66,7 @@
 		</profile>
 	</profiles>
 	<dependencies>
-		<!-- Cognifide Slice Framework dependencies -->
+		<!-- Wunderman Thompson Technology Slice Framework dependencies -->
 		<dependency>
 			<groupId>com.cognifide.slice</groupId>
 			<artifactId>slice-core-api</artifactId>
